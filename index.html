@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste ta culture de code</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Mono:wght@400;700&family=Orbitron:wght@500;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="quiz-header">
+            <h1 class="title">Quiz Code</h1>
+            <p class="subtitle">Teste tes connaissances</p>
+        </div>
+
+        <div class="quiz-card">
+            <!-- Barre de progression -->
+            <div class="progress-bar">
+                <div id="progressBar" class="progress-fill" style="width: 0%"></div>
+            </div>
+
+            <!-- Contenu du quiz -->
+            <div id="quizContent">
+                <div id="questionCounter" class="question-counter"></div>
+                <span id="techTag" class="tech-tag"></span>
+                <h2 id="questionText" class="question"></h2>
+                
+                <div id="optionsContainer" class="options"></div>
+                
+                <button id="nextBtn" class="next-btn" onclick="nextQuestion()">
+                    Suivant →
+                </button>
+            </div>
+
+            <!-- Écran de résultats -->
+            <div id="resultScreen" class="result-screen hidden">
+                <div class="score-circle">
+                    <div id="scoreDisplay" class="score-display"></div>
+                </div>
+                
+                <h2 id="resultMessage" class="result-message"></h2>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-label">Correctes</div>
+                        <div id="correctCount" class="stat-value correct"></div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Incorrectes</div>
+                        <div id="wrongCount" class="stat-value wrong"></div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Score</div>
+                        <div id="percentage" class="stat-value percentage"></div>
+                    </div>
+                </div>
+                
+                <button class="restart-btn" onclick="restartQuiz()">
+                    ↺ Recommencer
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
